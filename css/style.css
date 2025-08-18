@@ -1,0 +1,73 @@
+@import url('./vars.css');
+@import url('./normalize.css');
+
+html, body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: var(--main-font-size);
+    background: linear-gradient(60deg, #b9e1e8, #485486);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+ul, ol {
+    margin: 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+.header {
+    padding: 15px 0;
+    background: #45c2cf;
+}
+.list__numb {
+    padding-left: 40px;
+}
+
+.list__numb li:hover {
+    font-weight: 600;
+}
+
+/*  ------------Комбінатори  ' ', >, ~, +  --------------*/
+
+/* ' ' - всі нащадки */
+.list__numb span {
+    margin-right: 8px;
+    font-style: italic;
+}
+
+/* >  - тільки дочірні елементи */
+.section > p {
+    font-weight: 500;
+}
+
+/* ~  - всі сусідні елементи */
+
+/* .title_2 ~ p {
+    border: 1px solid #313231;
+    padding: 20px;
+    border-radius: 8px;
+} */
+.title_2 ~ * {
+    border: 1px solid #313231;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* +  - перший наступний елемент */
+.title_2 + * {
+    background: #ffddff;
+}
+
+.menu li:nth-child(3) {
+    font-weight: 600;
+}
+.section p:nth-child(2) { /* Не зовсім точно */
+    background: red;
+}
+
+.section p:nth-of-type(2) {
+    background: rgb(0, 85, 255);
+}
