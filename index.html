@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_9 FlexBox</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">About me</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Skills</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Portfolio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="old">
+                <h2>Old style - 'inline-block'</h2>
+                <div class="old__block">
+                    <div class="block__item block__item_old">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, itaque!</div>
+                    <div class="block__item block__item_old">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, itaque!</div>
+                    <div class="block__item block__item_old">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, itaque!</div>
+                    <div class="block__item block__item_old">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, itaque!</div>
+                </div>
+            </section>
+
+            <section class="new">
+                <h2>New style - 'flexbox'</h2>
+                <div class="new__block">
+                    <div class="block__item block__item_new">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div>
+                    <div class="block__item block__item_new">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div>
+                    <div class="block__item block__item_new">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div>
+                    <div class="block__item block__item_new">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div>
+                </div>
+
+            </section>
+
+             <section class="new">
+                <h2>New style - 'flexbox'</h2>
+                <div class="new__block flex-container">
+                    <div class="block__item block__item_flex">1. Lorem ipsum, dolor sit amet </div>
+                    <div class="block__item block__item_flex">2. Lorem ipsum, dolor </div>
+                    <!-- <div class="block__item block__item_flex">3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div>
+                    <div class="block__item block__item_flex">4. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, quo!</div> -->
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+</body>
+
+</html>
