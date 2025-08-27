@@ -1,0 +1,135 @@
+@import url('./normalize.css');
+@import url('./vars.css');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    /* margin: 0; */
+}
+
+html,
+body {
+    min-height: 100vh;
+    color: var(--main-color-text);
+    font-size: var(--main-font-size);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--main-background);
+}
+
+.container {
+    max-width: var(--width-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header {
+    background: #163439;
+    padding: 15px 0;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.logo__img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.menu {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #c8d4db;
+    transition: all 0.35s linear;
+}
+
+.menu__link:hover {
+    color: #dde7ec;
+    text-shadow: 4px 2px 4px #ffddff;
+}
+
+.section__title_border {
+    box-sizing: border-box;
+    width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 1px #02282a;
+    border: 1px solid #ccffcc;
+}
+
+.section__title_content {
+    box-sizing: content-box;
+    width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 1px #02282a;
+    border: 1px solid #ccffcc;
+}
+
+.test {
+    padding-bottom: 80px;
+}
+
+.test span {
+    display: inline-block;
+    margin: 40px;
+    width: 140px;
+    height: 70px;
+}
+
+.test span:nth-child(odd) {
+    background: aqua;
+    padding: 7px 14px;
+}
+
+.test span:nth-child(even) {
+    background: rgb(63, 121, 121);
+    padding: 7px 14px;
+}
+
+/* ------------------Start HW---------------------- */
+
+.weather {
+    background: #3399CC;
+    padding: 40px;
+}
+
+.weather__title {
+    font-size: 1.24rem;
+    font-weight: 400;
+}
+
+.citys {
+    max-width: 1170px;
+    margin: 10px auto;
+    border: 2px solid #fff;
+}
+
+.city {
+    display: inline-block;
+    width: calc(25% - 4px);
+    /* box-shadow: 0px 0px 3px 1px #ffddff; */
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.city_half {
+    width: calc(50% - 5px);
+}
+
+.city_full {
+    width: calc(100% - 5px);
+}
