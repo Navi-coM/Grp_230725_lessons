@@ -1,0 +1,108 @@
+@import url('./vars.css');
+
+/* position Value
+
+1. position: absolute - абсолютне позиціювання, вибиває з потоку;
+2. position: relative - відносне позиціювання, не вибиває з потоку;
+3. position: fixed - фіксується відносно вікна залізобетоноб вибивається з потоку;
+4. position: sticky - поєднання relative і fixed, не вибиває з потоку;
+5. position: static (по замовчуванню);
+
+top, right, bottom, left - напрямки (координати)
+z-index
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+html,
+body {
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    min-height: 200vh;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header {
+    display: flex;
+    padding: 20px 0;
+    background-color: #f2eef2;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+}
+.sidebar {
+    min-height: 600px;
+    border: 1px solid #000;
+}
+.aside-menu {
+    position: sticky;
+    top: 80px;
+}
+.main {
+
+    padding-top: 144px;
+}
+
+.sidebar {
+    min-width: 385px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.title_2 {
+    position: relative;
+    display: inline-block;
+}
+
+.title_2::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100px;
+    height: 8px;
+    background: #000;
+}
+
+.sup-title {
+    position: absolute;
+    top: 2px;
+    right: -80px;
+    font-size: 14px;
+    font-weight: 200;
+}
