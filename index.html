@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson_13 Form's style</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <main class="main">
+            <section class="section">
+                <div class="side">
+                    <h2 class="title_2">Create an Account</h2>
+                    <form class="form">
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="first-name" class="label">First
+                                    Name</label>
+                                <input type="text" id="first-name">
+                            </div>
+                            <div class="col col_half">
+                                <label for="last-name" class="label">Last
+                                    Name</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col_full">
+                                <label for="mail" class="label">E-mail</label>
+                                <input type="email" id="mail">
+                                <p class="text">We'll never share your email
+                                    with anyone else.</p>
+                            </div>
+                        </div>
+
+                        <div class="form__gender gender">
+                            <div class="gender__item">
+
+                                <label>
+                                    
+                                    <input type="radio" name="gender">
+                                    <span class="gender__check"></span>
+                                    Men
+
+                                    
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender">
+                                    <span class="gender__check"></span>
+                                    Women
+
+                                    
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col_half"></div>
+                                <div class="col col_half"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn_full">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="side">
+                    <h2 class="title_2">Profile</h2>
+                    <div class="row">
+                        <button class="btn btn_min">Sign Up</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
