@@ -1,0 +1,57 @@
+@import url('./normalize.css');
+@import url('./fonts.css');
+@import url('./vars.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+.title_1 {
+    margin: 0 0;
+}
+html,
+body {
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    background: var(--main-background);
+    color: var(--main-font-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+.title {
+    font-family: var(--title-font-family);
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 35px 0;
+}
+.nav {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--menu-font-color);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__link {
+    font-family: var(--menu-font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--menu-font-color);
+    text-decoration: none;
+}
