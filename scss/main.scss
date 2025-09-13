@@ -1,0 +1,123 @@
+@use 'normalize';
+@use 'vars' as v;
+@use 'extends';
+@use 'mixins' as m;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: v.$font-size;
+    background: v.$background-main;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    max-width: v.$container-width;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+    box-shadow: 1px 0 5px 1px #5a89c4d1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+
+    &__item {
+        margin: 0 20px;
+        position: relative;
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 1px;
+                right: -21px;
+                height: 22px;
+                width: 1px;
+                transform: rotate(180deg);
+                background: #13575a82;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #13575a;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        transition: color 0.3s;
+
+        &_italic {
+            font-style: italic;
+        }
+
+        &:hover {
+            color: #31959a;
+        }
+    }
+}
+
+.section {
+    padding: 80px 0;
+    &__block {
+        @include m.flex(center, flex-start);
+        flex-direction: column;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        &_mini {
+            max-width: 400px;
+            font-size: m.rem(18);
+            line-height: m.line_height(18);
+
+            &:nth-of-type(2) {
+                align-self: center;
+            }
+             &:last-of-type {
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+.btn {
+    @extend %btn-shared;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &_red {
+        background: #84381c;
+
+        &-darker {
+            transition: all 0.3s;
+
+            &:hover {
+                background: darken(#84381c, 8%);
+                transform: translate(10px, 5px) rotate(45deg) scale(1.12);
+            }
+        }
+    }
+
+    &_blue {
+        background: #4474ab;
+    }
+}
+
+.btn-submit {
+    @extend .btn;
+    transform: scale(1.2);
+}
