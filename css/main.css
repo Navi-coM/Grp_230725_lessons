@@ -1,0 +1,262 @@
+@keyframes moveCircle {
+  0% {
+    left: 0;
+    transform: scale(1) rotate(0);
+  }
+  25% {
+    top: 45px;
+    left: 80px;
+    transform: scale(1.2) rotate(90deg);
+  }
+  50% {
+    top: 80px;
+    left: 180px;
+    transform: scale(1.5) rotate(180deg);
+  }
+  75% {
+    top: 45px;
+    left: 80px;
+    transform: scale(1.2) rotate(270deg);
+  }
+  100% {
+    left: 0;
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes rotateTitle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes moveBallLeft {
+  0%, 50% {
+    transform: rotate(0) translateX(0);
+  }
+  100% {
+    transform: rotate(30deg) translateX(-35px);
+  }
+}
+@keyframes moveBallRight {
+  0% {
+    transform: rotate(-30deg) translateX(35px);
+  }
+  50%, 100% {
+    transform: rotate(0) translateX(0);
+  }
+}
+@keyframes moveShadowLeft {
+  0%, 50% {
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.35;
+    transform: translateX(-25px);
+  }
+}
+@keyframes moveShadowRight {
+  0% {
+    opacity: 0.35;
+    transform: translateX(25px);
+  }
+  50%, 100% {
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+}
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  background: linear-gradient(#d3c3d3, #121515);
+  color: #28616d;
+  min-height: 100vh;
+}
+
+.header,
+.main {
+  position: relative;
+  z-index: 1;
+  padding: 0 calc(50vw - 585px);
+}
+@media screen and (max-width: 1200px) {
+  .header,
+  .main {
+    padding: 0 calc(50vw - (585px - 12%));
+  }
+}
+@media screen and (max-width: 992px) {
+  .header,
+  .main {
+    padding: 0 calc(50vw - (585px - 26.5%));
+  }
+}
+@media screen and (max-width: 768px) {
+  .header,
+  .main {
+    padding: 0 15px;
+  }
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.title_2 {
+  display: inline-block;
+  animation: rotateTitle 2.5s 10;
+}
+
+.circle {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(#83e08b, #cd444a);
+}
+.circle__inner {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #cddcdc, #4f4d4f);
+  box-shadow: 0 0 3px 0 #3e3d39;
+  animation: moveCircle 4s linear 2s infinite;
+}
+.circle__inner:hover {
+  animation-play-state: paused;
+}
+
+.square {
+  position: relative;
+  margin: 20px 0;
+  height: 280px;
+}
+.square__inner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #2f4b4b;
+  overflow: hidden;
+}
+.square__inner::after {
+  content: "Beetroot";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  color: #fff;
+  background: #804180;
+  font-size: 1.23rem;
+  letter-spacing: 1.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: scaleText cubic-bezier(0.25, 0.3, 0.25, 1) 0.99s infinite alternate;
+}
+.square__inner::before {
+  content: "";
+  position: absolute;
+  top: -28%;
+  right: -32%;
+  width: 160%;
+  height: 160%;
+  background: conic-gradient(#ffddff, #d5a0d5, #975a97, #860f86);
+  animation: rotateTitle linear 1.2s infinite;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.swing {
+  display: flex;
+}
+.swing__item {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(#263030, #faf8f8);
+  box-shadow: 0 0 3px 1px #9a929a;
+}
+.swing__item_left {
+  animation: moveBallLeft 0.5s ease-in-out infinite alternate;
+}
+.swing__item_right {
+  animation: moveBallRight 0.5s ease-in-out infinite alternate;
+}
+.swing__item:hover {
+  animation-play-state: paused;
+}
+
+.shadow {
+  padding-top: 30px;
+  display: flex;
+}
+.shadow__item {
+  width: 35px;
+  height: 0.35em;
+  background: #6a7b7b;
+  border-radius: 50%;
+  filter: blur(2.4px);
+}
+.shadow__item_left {
+  animation: moveShadowLeft 0.5s ease-in-out infinite alternate;
+}
+.shadow__item_right {
+  animation: moveShadowRight 0.5s ease-in-out infinite alternate;
+}
+
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 47px;
+  border: 1px solid #323846;
+  background: white;
+  color: #435272;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+.arrow-btn:hover .arrow {
+  display: inline-block;
+  animation: bounceArrow 1s infinite;
+}/*# sourceMappingURL=main.css.map */
