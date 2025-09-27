@@ -1,0 +1,142 @@
+:root {
+  --font-color-main: #394747;
+  --font-color-menu-link: #828282;
+  --font-color-menu-hover: #070707;
+  --font-color-title: #201e1e;
+  --font-color-title_2: #4d6869;
+  --background-main: #fff;
+  --background-secondary: #e5ecec;
+  --backrgound-first-screen: url("../assets/img/banner.jpg");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--main-font-size);
+}
+
+.wrapper {
+  background: var(--background-main);
+  color: var(--font-color-main);
+}
+
+.input__toggle:checked ~ .wrapper {
+  --font-color-main: #aee6e6;
+  --font-color-menu-link: #b2d3d3;
+  --font-color-menu-hover: #918282;
+  --font-color-title: #e4d8d8;
+  --font-color-title_2: #95dee0;
+  --background-main: #222e33;
+  --background-secondary: #324141;
+  --backrgound-first-screen: url("../assets/img/banner_dark.jpg");
+}
+
+.label__toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 6px 8px;
+  background: #95dee0;
+  user-select: none;
+}
+
+.input__toggle {
+  display: none;
+}
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+}
+
+.first-screen {
+  min-height: 388px;
+  background: var(--backrgound-first-screen) no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  border-bottom: 1px solid var(--font-color-menu-link);
+  padding: 28px 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--font-color-menu-link);
+  transition: all 0.3s;
+}
+
+.menu__link:hover {
+  color: var(--font-color-menu-hover);
+}
+
+.title {
+  margin: 12px 0 50px;
+  color: var(--font-color-title);
+}
+
+.section {
+  padding: 80px 0;
+}
+.section:first-of-type {
+  padding: 0 0;
+}
+.section:nth-of-type(even) {
+  background: var(--background-secondary);
+}
+
+.title_2 {
+  color: var(--font-color-title_2);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.content {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.text {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.text_pos {
+  position: relative;
+  top: -100px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: var(--title-text-color);
+}
+.title_1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.title_2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+.title_italic {
+  font-style: italic;
+  color: var(--italic-text-color);
+}/*# sourceMappingURL=main.css.map */

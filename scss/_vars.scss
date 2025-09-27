@@ -1,0 +1,21 @@
+$font_size_main: 18px;
+$font_color_main: #394747;
+$font_color_title: #201e1e;
+$font_color_additional: #7b7b7b;
+
+
+$width_container: 1170px;
+$adaptive_width_container: calc($width_container / 2);
+
+// -------------------------------------------
+
+:root {
+    --font-color-main: #394747;
+    --font-color-menu-link: #828282;
+    --font-color-menu-hover: #070707;
+    --font-color-title: #201e1e;
+    --font-color-title_2: #4d6869;
+    --background-main: #fff;
+    --background-secondary: #e5ecec;
+    --backrgound-first-screen: url('../assets/img/banner.jpg');
+}
