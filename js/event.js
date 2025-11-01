@@ -47,3 +47,52 @@ function alertInfo() {
 
 btnChangeColor.addEventListener('click', changeColorBody);
 btnChangeColor.addEventListener('click', alertInfo);
+
+
+// -------------------------------- Event Об'єкт ----------------------
+
+
+const btnsAction = document.querySelectorAll('a[data-purpose]');
+
+let btnStart;
+
+for(let btn of btnsAction) {
+    if(btn.textContent === 'Start') {
+        btnStart = btn;
+    }
+}
+
+// document.body.addEventListener('click', function(event) {
+//     // console.log(event);
+//     console.log(event.currentTarget);
+//     console.log(event.target);
+//     console.log(event.type);
+//     console.log(event.clientX);
+// })
+
+const linkGoogle = document.querySelector('#link_google');
+
+linkGoogle.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert(`Переходу на Гугл не буде!`)
+})
+
+// --------------------------- Занурення, Всплиття -----------------
+
+// 1 window → document → html → body → div.parent → div.child → button.   // занурення
+// 2 target                          
+// 3 button → div.child → div.parent → body → html → document → window   // всплиття
+
+const parentEl = document.querySelector('#parent');
+const childEl = document.querySelector('#child');
+const btnClick = document.querySelector('#btn_click');
+
+// parentEl.addEventListener('click', () => console.log('Parent'));
+// childEl.addEventListener('click', () => console.log('Child'));
+// btnClick.addEventListener('click', () => console.log('Btn-click'));
+
+parentEl.addEventListener('click', (e) => {
+    if(e.target.classList.contains('btn-click')) {
+        console.log(`Ви клікнули по кнопці: ${e.target.textContent}`);
+    }
+})
