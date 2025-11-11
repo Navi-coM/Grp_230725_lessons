@@ -1,9 +1,8 @@
-
 .body {
     min-height: 100vh;
     margin: 0;
     // background: linear-gradient(0deg, #3d7385, #c5c6c6) no-repeat;
-    background-color: #3d7385;
+    background-color: #73afc3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #1f2323;
     transition: background-color 0.35s linear;
@@ -11,6 +10,14 @@
     &_dark {
         background-color: #0e2231;
         color: #fff;
+
+        .header {
+            background: #423f42;
+            &__logo {
+                color: #ffddff;
+            }
+        }
+
     }
 }
 
@@ -37,7 +44,7 @@
     top: 0;
     left: 0;
     z-index: 8;
-    background: #35a6ba;
+    background: #48bace;
 
     &::before {
         content: '';
@@ -75,7 +82,7 @@
         position: relative;
         z-index: 7;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             flex-direction: column;
             margin-top: 0;
         }
@@ -83,7 +90,8 @@
 
     &__item {
         margin: 0 15px;
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             width: 100%;
             margin: 0 0;
             text-align: center;
@@ -91,12 +99,14 @@
             box-shadow: inset 0px 1px 8px 2px #123747;
         }
     }
+
     &__link {
         text-decoration: none;
         color: #fff;
         text-transform: uppercase;
-        font-family: sans-serif;   
+        font-family: sans-serif;
     }
+
     &__burger {
         display: none;
 
@@ -112,6 +122,7 @@
                 width: 30px;
                 top: 9px;
             }
+
             &.active::after {
                 transform: rotate(-45deg);
                 width: 30px;
@@ -169,11 +180,12 @@
         }
     }
 }
+
 .main {
     margin-top: 90px;
 }
+
 .active {
     font-size: 1.8rem;
     color: #6e9c99;
 }
-
